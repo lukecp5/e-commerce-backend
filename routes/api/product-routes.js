@@ -16,13 +16,13 @@ router.get("/", async (req, res) => {
 				through: "ProductTag",
 			},
 			{
-        model: Category,
-        attributes: ["id", "category_name"]
-      },
+				model: Category,
+				attributes: ["id", "category_name"],
+			},
 		],
 	})
-		.then((parsedTagData) => {
-			res.json(parsedTagData);
+		.then((productData) => {
+			res.json(productData);
 		})
 		.catch((err) => {
 			res.json(err);
@@ -33,6 +33,25 @@ router.get("/", async (req, res) => {
 router.get("/:id", (req, res) => {
 	// find a single product by its `id`
 	// be sure to include its associated Category and Tag data
+	Product.findByPk(req.params.id, {
+		include: [
+			{
+				model: Tag,
+				attributes: ["id", "tag_name"],
+				through: "ProductTag",
+			},
+			{
+				model: Category,
+				attributes: ["id", "category_name"],
+			},
+		],
+	})
+		.then((specificProduct) => {
+			res.json(specificProduct);
+		})
+		.catch((err) => {
+			res.json(err);
+		});
 });
 
 // create new product
