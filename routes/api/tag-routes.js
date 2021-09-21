@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   // be sure to include its associated Product data
   const tagData = await Tag.findAll()
   .then((tags)=>{
-
+    console.log(tags)
   })
   .catch((err) => {
     res.json(err);
