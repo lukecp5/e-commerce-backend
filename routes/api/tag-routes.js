@@ -16,9 +16,18 @@ router.get('/', (req, res) => {
   res.json(tagData);
 });
 
-router.get('/:id', (req, res) => {
-  // find a single tag by its `id`
-  // be sure to include its associated Product data
+router.get("/:id", (req, res) => {
+	// find a single tag by its `id`
+	const specificTag = Tag.findByPk(req.params.id, {
+		 include:{
+			
+		 }
+		})
+	.then(retrievedTag => {
+		res.json(retrievedTag);
+	})
+
+	// be sure to include its associated Product data
 });
 
 router.post('/', (req, res) => {
