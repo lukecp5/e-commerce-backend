@@ -46,12 +46,12 @@ router.post("/", (req, res) => {
 	Tag.create({
 		tag_name: req.body.tag_name,
 	})
-	.then((tag) => {
-		res.json(tag);
-	})
-	.catch((err) => {
-		res.json(err);
-	})
+		.then((tag) => {
+			res.json(tag);
+		})
+		.catch((err) => {
+			res.json(err);
+		});
 });
 
 router.put("/:id", (req, res) => {
