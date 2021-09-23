@@ -23,6 +23,7 @@ All that's missing to make this a complete E-Commerce website is a simple front-
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
+  - [Demo Video](#demonstration-video)
   - [Built With](#built-with)
   - [License](#license)
 ---
