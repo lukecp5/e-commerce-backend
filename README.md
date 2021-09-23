@@ -76,7 +76,7 @@ The server is running, now you can make requests to it through your desired meth
 ---
 
 ## **Demonstration Video**
-If you'd like to see a full demo of the application, please visit the following link: *Coming Soon* 
+If you'd like to see a full demo of the application, please visit the following link: [Demo Video on Google Drive](https://drive.google.com/file/d/1gdSIFayRsXjm4BekD5eJcBi1v77JLgIB/view?usp=sharing)
 
 ---
 
